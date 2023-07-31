@@ -1,104 +1,123 @@
 <!DOCTYPE html>
 <html lang="en">
 
+
+
 <head>
     <title>HTML&CSS</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="style.css">
 </head>
 
-<body style="margin: 0; padding: 0;">
+<body>
 
-    <!-- Header -->
-    <header
-        style="background-color: aliceblue; position: sticky; top: 0; display: flex; flex-direction: row; justify-content: space-between;">
+    <header>
         <a href="#pavasaris">Šeit ir virsraksts, kurš paliek galvenes daļā.</a>
         <div>
-            <a href="#vasara">Vasara</a>
-            <a href="#plava">Uzdevumi</a>
+            <a class="top-right-button" href="#vasara">Vasara</a>
+            <a class="top-right-button" href="#plava">Pļava</a>
         </div>
     </header>
 
+
+
     <div id="pavasaris">
-        <img src="resources/Pavasaris.jpg" alt="Pavasaris">
-        <div>
-            <h1>Pavasaris</h1>
-            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
-                industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
-                scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap
-                into
-                electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the
-                release of
-                Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like
-                Aldus PageMaker including versions of Lorem Ipsum.</p>
-        </div>
+        <img class="hero-image" src="resources/Pavasaris.jpg" alt="Pavasaris">
     </div>
-    <div id="vasara">
-        <img src="resources/Vasara.jpg" alt="Vasara">
-        <h1>Šeit ir apraksts, kuram ir jāatrodas bildei kreisajā pusē.</h1><br>
-        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
+
+    <div class="content">
+
+        <div class="section">
+        <h1 class="center">Pavasaris</h1>
+        <p class="center">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has
+            been the
             industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
-            scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into
-            electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of
+            scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap
+            into
+            electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the
+            release of
             Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like
             Aldus PageMaker including versions of Lorem Ipsum.</p>
-    </div>
-
-    <div id="plava" style="display: flex; flex-direction: row;">
-        <div style="display: block;">
-            <img style="display: block; width:100%" src="resources/Plava.jpg" alt="Plava">
         </div>
-        <div style="display: block;">
-            <h1>Šeit apraksts, kuram ir jāatrodas bildes labajā pusē.</h1>
-            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
-                industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
-                scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap
-                into
-                electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the
-                release of
-                Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like
-                Aldus PageMaker including versions of Lorem Ipsum.</p>
+
+        <div id="vasara" class="section">
+            <img src="resources/Vasara.jpg" alt="Vasara" class="image">
+            <div class="columnt-text">
+                <h1>Šeit ir apraksts, kuram ir jāatrodas bildei kreisajā pusē.</h1>
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
+                    industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type
+                    and
+                    scrambled it to make a type specimen book. It has survived not only five centuries, but also the
+                    leap into
+                    electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the
+                    release of
+                    Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software
+                    like
+                    Aldus PageMaker including versions of Lorem Ipsum.</p>
+            </div>
         </div>
+
+        <div id="plava" class="section">
+            
+                <img class="image" src="resources/Plava.jpg" alt="Plava">
+            
+            <div class="d-block columnt-text">
+                <h1>Šeit apraksts, kuram ir jāatrodas bildes labajā pusē.</h1>
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
+                    industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type
+                    and
+                    scrambled it to make a type specimen book. It has survived not only five centuries, but also the
+                    leap
+                    into
+                    electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the
+                    release of
+                    Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software
+                    like
+                    Aldus PageMaker including versions of Lorem Ipsum.</p>
+            </div>
+        </div>
+
+
+        <!-- Exercises -->
+        <div id="exercises" class="section">
+            <h1>Uzdevumi</h1>
+            <ul>
+                <li class="done">Nomaini visiem tekstiem fontu.</li>
+                <li class="done">Sakārto bilžu un tekstu novietojumu.</li>
+                <li class="done">Pieliec tekstu zem virsrakstiem.</li>
+                <li class="done">Pārtaisi uzdevumu sadaļu, izmantojot HTML atbilstošu tagu, lai izveidotu sarakstu.</li>
+                <li class="done">Pieliec stilu header daļai, lai tā atgādinātu header.</li>
+                <li class="done">Pieliec stilu footer daļai, lai teksts būtu centrā un elements izskatītos pēc footer.
+                </li>
+                <li class="done">Augšējo bildi formatē tā, lai tiktu aizņemts viss ekrāna platums.</li>
+                <li class="done">Pievieno karti.</li>
+                <li class="done">Pievieno tabulu, kurai būtu vismaz 2 kolonnas un 3 rindas.</li>
+            </ul>
+        </div>
+
+        <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d34889.857514578696!2d24.356337349999997!3d56.869678699999994!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46e92d6c77c332f1%3A0x400cfcd68f31880!2sSalaspils%2C%20Salaspils%20pils%C4%93ta!5e0!3m2!1sen!2slv!4v1690393773197!5m2!1sen!2slv"
+            width="600" height="450" class=".b-0" allowfullscreen="" loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade" class="section">
+        </iframe>
+
+        <table class="section">
+            <tr>
+                <th>Kolonas Virsraksts 1</th>
+                <th>Kolonas Virsraksts 2</th>
+            </tr>
+            <tr>
+                <td>Saturs 1</td>
+                <td>Saturs 2</td>
+            </tr>
+            <tr>
+                <td>Saturs 1</td>
+                <td>Saturs 2</td>
+            </tr>
+        </table>
+
     </div>
-
-
-    <!-- Exercises -->
-    <div id="exercises">
-        <h1>Uzdevumi</h1>
-        <ul>
-            <li>Nomaini visiem tekstiem fontu.</li>
-            <li>Sakārto bilžu un tekstu novietojumu.</li>
-            <li>Pieliec tekstu zem virsrakstiem.</li>
-            <li>Pārtaisi uzdevumu sadaļu, izmantojot HTML atbilstošu tagu, lai izveidotu sarakstu.</li>
-            <li>Pieliec stilu header daļai, lai tā atgādinātu header.</li>
-            <li>Pieliec stilu footer daļai, lai teksts būtu centrā un elements izskatītos pēc footer.</li>
-            <li>Augšējo bildi formatē tā, lai tiktu aizņemts viss ekrāna platums.</li>
-            <li>Pievieno karti.</li>
-            <li>Pievieno tabulu, kurai būtu vismaz 2 kolonnas un 3 rindas.</li>
-        </ul>
-    </div>
-
-    <iframe
-        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d34889.857514578696!2d24.356337349999997!3d56.869678699999994!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46e92d6c77c332f1%3A0x400cfcd68f31880!2sSalaspils%2C%20Salaspils%20pils%C4%93ta!5e0!3m2!1sen!2slv!4v1690393773197!5m2!1sen!2slv"
-        width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
-        referrerpolicy="no-referrer-when-downgrade">
-    </iframe>
-
-    <table>
-        <tr>
-          <th>Kolonas Virsraksts 1</th>
-          <th>Kolonas Virsraksts 2</th>
-        </tr>
-        <tr>
-          <td>Saturs 1</td>
-          <td>Saturs 2</td>
-        </tr>
-        <tr>
-          <td>Saturs 1</td>
-          <td>Saturs 2</td>
-        </tr>
-      </table>
-
     <!-- Footer -->
     <footer>
         <p>Šeit ir tukšs footers</p>

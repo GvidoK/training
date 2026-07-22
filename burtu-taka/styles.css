@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;700;800&family=Nunito:wght@600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700;800&display=swap');
 
 :root{
   --sky-top:#BFE6F5;
@@ -15,7 +15,7 @@
 *{box-sizing:border-box;}
 html,body{
   margin:0; padding:0; min-height:100%;
-  font-family:'Nunito', sans-serif;
+  font-family:'Open Sans', sans-serif;
   color:var(--ink);
   background:linear-gradient(180deg, var(--sky-top) 0%, var(--sky-bottom) 55%, var(--grass) 56%, var(--grass-dark) 100%);
 }
@@ -47,7 +47,7 @@ body{
   min-height:100dvh;
 }
 h1{
-  font-family:'Baloo 2', sans-serif; font-weight:800; letter-spacing:0.5px;
+  font-family:'Open Sans', sans-serif; font-weight:800; letter-spacing:0.5px;
   margin:2px 0 2px; font-size:clamp(22px,4.5vw,32px); color:var(--grass-dark);
   text-shadow:0 2px 0 rgba(255,255,255,0.6);
 }
@@ -63,14 +63,14 @@ h1{
 
 .score{
   background:var(--cream); border-radius:20px; padding:6px 14px;
-  font-family:'Baloo 2'; font-weight:700; font-size:17px;
+  font-family:'Open Sans'; font-weight:700; font-size:17px;
   box-shadow:0 4px 0 rgba(0,0,0,0.08);
 }
 
 /* -------- set tabs (Burti / Cipari) -------- */
 .setTabs{ display:flex; gap:8px; margin-bottom:10px; }
 .setTab{
-  font-family:'Baloo 2'; font-weight:700; font-size:14px; color:var(--grass-dark);
+  font-family:'Open Sans'; font-weight:700; font-size:14px; color:var(--grass-dark);
   background:rgba(255,251,240,0.7); border:2px solid transparent; border-radius:14px;
   padding:6px 16px; cursor:pointer;
 }
@@ -90,7 +90,7 @@ canvas{
 
 .hint-bubble{
   position:absolute; top:-6px; left:50%; transform:translate(-50%,-100%);
-  background:var(--ladybug); color:#fff; font-family:'Baloo 2'; font-weight:700;
+  background:var(--ladybug); color:#fff; font-family:'Open Sans'; font-weight:700;
   padding:8px 16px; border-radius:16px; font-size:15px; white-space:nowrap;
   opacity:0; transition:opacity 0.2s, transform 0.2s; pointer-events:none;
 }
@@ -107,14 +107,14 @@ canvas{
 }
 .celebrate.show{ display:flex; }
 .celebrate .big{ font-size:48px; }
-.celebrate .msg{ font-family:'Baloo 2'; font-weight:800; font-size:24px; color:var(--grass-dark); margin-top:6px; text-align:center; padding:0 12px;}
+.celebrate .msg{ font-family:'Open Sans'; font-weight:800; font-size:24px; color:var(--grass-dark); margin-top:6px; text-align:center; padding:0 12px;}
 
 .chips{
   display:flex; gap:8px; margin-top:12px; flex-wrap:wrap; justify-content:center;
   max-width:460px;
 }
 .chip{
-  font-family:'Baloo 2'; font-weight:700; font-size:16px; color:#fff;
+  font-family:'Open Sans'; font-weight:700; font-size:16px; color:#fff;
   background:var(--leaf-btn); border:none; border-radius:16px 4px 16px 4px;
   padding:8px 16px; cursor:pointer; box-shadow:0 4px 0 rgba(0,0,0,0.15);
   transition:transform 0.1s; position:relative;

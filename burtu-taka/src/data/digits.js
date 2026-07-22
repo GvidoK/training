@@ -12,7 +12,7 @@ export const DIGITS = [
     stroke(join(arc(50,32,20, -160,60, 20), line(60,49, 28,82, 16), line(28,82, 76,82, 14))),
   ]},
   { id: '3', label: '3', strokes: [
-    stroke(join(arc(48,30,18, -70,110, 20), arc(48,68,20, -70,130, 20))),
+    stroke(join(arc(48,28,18, 180,440, 22), arc(48,68,20, -90,100, 26))),
   ]},
   { id: '4', label: '4', strokes: [
     stroke(join(line(58,15, 26,60, 14), line(26,60, 74,60, 14))),

@@ -15,13 +15,13 @@ function macron(cx) {              // garumzīme: Ā Ē Ī Ū
 function caron(cx) {               // mīkstinājuma zīme (ˇ): Č Š Ž
   return stroke(join(line(cx - 7, 3, cx, 10, 4), line(cx, 10, cx + 7, 3, 4)));
 }
-function comma(cx) {               // mīkstinājuma zīme (,): Ģ Ķ Ļ Ņ
-  return stroke(quad(cx + 4, 3, cx + 6, 9, cx - 1, 13, 8));
+function comma(cx) {               // mīkstinājuma zīme (,): Ģ Ķ Ļ Ņ - apakšā, labajā pusē
+  return stroke(quad(cx + 4, 80, cx + 6, 87, cx - 1, 92, 8));
 }
 
 // -------- pamatburtu svītras (atkārtoti izmantotas arī diakritiskajos) --------
 const A_STROKES = [
-  stroke(line(50,15, 28,85, 18)),
+  stroke(line(28,85, 50,15, 18)),
   stroke(line(50,15, 72,85, 18)),
   stroke(line(36,58, 64,58, 10)),
 ];
@@ -49,7 +49,7 @@ const F_STROKES = [
 ];
 const G_STROKES = [
   stroke(arc(50,50,32, -40,-350, 34)),
-  stroke(join(line(81,56, 55,56, 8), line(55,56, 55,42, 6))),
+  stroke(join(line(56,54, 81,54, 8), line(81,54, 81,68, 6))),
 ];
 const H_STROKES = [
   stroke(line(28,15, 28,85, 20)),
@@ -64,7 +64,7 @@ const J_STROKES = [
 ];
 const K_STROKES = [
   stroke(line(28,15, 28,85, 20)),
-  stroke(line(28,50, 72,15, 14)),
+  stroke(line(72,15, 28,50, 14)),
   stroke(line(28,50, 72,85, 14)),
 ];
 const L_STROKES = [
@@ -92,8 +92,8 @@ const S_STROKES = [
   stroke(cubic(66,24, 34,18, 66,82, 34,76, 32)),
 ];
 const T_STROKES = [
-  stroke(line(26,15, 74,15, 14)),
   stroke(line(50,15, 50,85, 20)),
+  stroke(line(26,15, 74,15, 14)),
 ];
 const U_STROKES = [
   stroke(join(line(28,15, 28,60, 12), quad(28,60, 28,85, 50,85, 10), quad(50,85, 72,85, 72,60, 10), line(72,60, 72,15, 12))),
@@ -116,15 +116,15 @@ export const LETTERS_PRINT = [
   { id: 'Ē', label: 'Ē', strokes: [...E_STROKES, macron(49)] },
   { id: 'F', label: 'F', strokes: F_STROKES },
   { id: 'G', label: 'G', strokes: G_STROKES },
-  { id: 'Ģ', label: 'Ģ', strokes: [...G_STROKES, comma(68)] },
+  { id: 'Ģ', label: 'Ģ', strokes: [...G_STROKES, comma(76)] },
   { id: 'H', label: 'H', strokes: H_STROKES },
   { id: 'I', label: 'I', strokes: I_STROKES },
   { id: 'Ī', label: 'Ī', strokes: [...I_STROKES, macron(50)] },
   { id: 'J', label: 'J', strokes: J_STROKES },
   { id: 'K', label: 'K', strokes: K_STROKES },
-  { id: 'Ķ', label: 'Ķ', strokes: [...K_STROKES, comma(66)] },
+  { id: 'Ķ', label: 'Ķ', strokes: [...K_STROKES, comma(68)] },
   { id: 'L', label: 'L', strokes: L_STROKES },
-  { id: 'Ļ', label: 'Ļ', strokes: [...L_STROKES, comma(38)] },
+  { id: 'Ļ', label: 'Ļ', strokes: [...L_STROKES, comma(62)] },
   { id: 'M', label: 'M', strokes: M_STROKES },
   { id: 'N', label: 'N', strokes: N_STROKES },
   { id: 'Ņ', label: 'Ņ', strokes: [...N_STROKES, comma(66)] },

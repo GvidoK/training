@@ -27,7 +27,7 @@ const A_STROKES = [
 ];
 const B_STROKES = [
   stroke(line(28,15, 28,85, 22)),
-  stroke(join(cubic(28,15, 60,15, 60,38, 28,50, 18), cubic(28,50, 64,52, 64,78, 28,85, 18))),
+  stroke(join(arc(28,32.5,17.5, -90,90, 18), arc(28,67.5,19, -90,90, 18))),
 ];
 const C_STROKES = [
   stroke(arc(50,50,32, -40,-300, 32)),
@@ -81,17 +81,17 @@ const O_STROKES = [
 ];
 const P_STROKES = [
   stroke(line(28,15, 28,85, 22)),
-  stroke(cubic(28,15, 62,15, 62,38, 28,50, 20)),
+  stroke(arc(28,32.5,17.5, -90,90, 20)),
 ];
 const R_STROKES = [
   stroke(line(28,15, 28,85, 22)),
-  stroke(cubic(28,15, 62,15, 62,38, 28,50, 20)),
+  stroke(arc(28,32.5,17.5, -90,90, 20)),
   stroke(line(28,50, 74,85, 14)),
 ];
 const S_STROKES = [
   stroke(join(
-    quad(62,19, 10,22, 34,46, 22),
-    quad(34,46, 90,64, 38,81, 22),
+    arc(50,32.5,17.5, -90,-270, 20),
+    arc(50,67.5,17.5, -90,90, 20),
   )),
 ];
 const T_STROKES = [

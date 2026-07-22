@@ -165,16 +165,6 @@ export class DrawingEngine {
     const t = (performance.now() - this._t0) / 1000;
     ctx.clearRect(0, 0, W, H);
 
-    // ūdenszīme
-    ctx.save();
-    ctx.globalAlpha = 0.07;
-    ctx.font = `800 ${Math.round(H * 0.62)}px ${this.opts.watermarkFont || "'Baloo 2', sans-serif"}`;
-    ctx.fillStyle = '#4C7C2A';
-    ctx.textAlign = 'center';
-    ctx.textBaseline = 'middle';
-    ctx.fillText(item.label, W / 2, H / 2 + H * 0.02);
-    ctx.restore();
-
     this.strokes.forEach((s, i) => {
       const pts = s.points.map(p => this._toCanvas(p));
 

@@ -89,7 +89,10 @@ const R_STROKES = [
   stroke(line(28,50, 74,85, 14)),
 ];
 const S_STROKES = [
-  stroke(cubic(66,24, 34,18, 66,82, 34,76, 32)),
+  stroke(join(
+    cubic(64,22, 24,18, 24,44, 50,44, 22),
+    cubic(50,44, 76,44, 76,70, 36,78, 22),
+  )),
 ];
 const T_STROKES = [
   stroke(line(50,15, 50,85, 20)),

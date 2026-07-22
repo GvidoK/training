@@ -11,7 +11,6 @@ import { registerMode } from './mode-registry.js';
 
 const MODE_KEY = 'trace';
 const BUG_EMOJI = '🐞';
-const WATERMARK_FONT = "'Baloo 2', sans-serif";
 
 export class TraceModeController {
   /**
@@ -27,7 +26,6 @@ export class TraceModeController {
 
     this.engine = new DrawingEngine(dom.canvas, {
       bugEmoji: BUG_EMOJI,
-      watermarkFont: WATERMARK_FONT,
       onHint: () => this._showHint(),
       onTreatCollected: (info) => this.handlers.onTreatsChange && this.handlers.onTreatsChange(info),
       onStrokeUnlocked: (strokeIdx, total) => this.handlers.onStrokeUnlocked && this.handlers.onStrokeUnlocked(strokeIdx, total),

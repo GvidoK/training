@@ -1,7 +1,8 @@
-// Service worker: app shell cache-first, lai Burtu Taka strādā offline uz
-// planšetes pēc pirmās ielādes. Versiju numuru palielini, mainot failus,
-// lai vecais cache tiktu iztīrīts.
-const CACHE_VERSION = 'burtu-taka-v2';
+// Service worker: network-first (ar cache fallback), lai Burtu Taka strādā
+// offline uz planšetes, bet vienmēr rāda jaunāko versiju, kad ir tīkls.
+// Versiju numuru vēl arvien vērts palielināt lielākām izmaiņām, lai vecais
+// cache tiktu iztīrīts uzreiz activate solī.
+const CACHE_VERSION = 'burtu-taka-v3';
 const APP_SHELL = [
   './',
   './index.html',
@@ -38,15 +39,12 @@ self.addEventListener('activate', (event) => {
 self.addEventListener('fetch', (event) => {
   if (event.request.method !== 'GET') return;
   event.respondWith(
-    caches.match(event.request).then((cached) => {
-      if (cached) return cached;
-      return fetch(event.request)
-        .then((res) => {
-          const copy = res.clone();
-          caches.open(CACHE_VERSION).then((cache) => cache.put(event.request, copy));
-          return res;
-        })
-        .catch(() => cached);
-    })
+    fetch(event.request)
+      .then((res) => {
+        const copy = res.clone();
+        caches.open(CACHE_VERSION).then((cache) => cache.put(event.request, copy));
+        return res;
+      })
+      .catch(() => caches.match(event.request))
   );
 });

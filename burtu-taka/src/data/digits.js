@@ -1,5 +1,5 @@
 // Cipari 0-9. Struktūra identiska letters-print.js.
-import { line, arc, cubic, quad, join, stroke } from './path-utils.js';
+import { line, arc, cubic, join, stroke } from './path-utils.js';
 
 export const DIGITS = [
   { id: '0', label: '0', strokes: [
@@ -12,14 +12,14 @@ export const DIGITS = [
     stroke(join(arc(50,32,20, -160,60, 20), line(60,49, 28,82, 16), line(28,82, 76,82, 14))),
   ]},
   { id: '3', label: '3', strokes: [
-    stroke(join(quad(30,22, 68,15, 50,48, 18), quad(50,48, 72,52, 30,80, 18))),
+    stroke(join(arc(48,30,18, -70,110, 20), arc(48,68,20, -70,130, 20))),
   ]},
   { id: '4', label: '4', strokes: [
     stroke(join(line(58,15, 26,60, 14), line(26,60, 74,60, 14))),
     stroke(line(58,15, 58,85, 20)),
   ]},
   { id: '5', label: '5', strokes: [
-    stroke(join(line(32,18, 32,50, 10), quad(32,50, 78,55, 40,85, 20))),
+    stroke(join(line(32,15, 32,50, 10), arc(32,67.5,17.5, -90,110, 22))),
     stroke(line(30,15, 72,15, 12)),
   ]},
   { id: '6', label: '6', strokes: [

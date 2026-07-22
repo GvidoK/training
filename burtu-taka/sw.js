@@ -1,7 +1,7 @@
 // Service worker: app shell cache-first, lai Burtu Taka strādā offline uz
 // planšetes pēc pirmās ielādes. Versiju numuru palielini, mainot failus,
 // lai vecais cache tiktu iztīrīts.
-const CACHE_VERSION = 'burtu-taka-v1';
+const CACHE_VERSION = 'burtu-taka-v2';
 const APP_SHELL = [
   './',
   './index.html',
@@ -13,7 +13,6 @@ const APP_SHELL = [
   './src/app.js',
   './src/data/path-utils.js',
   './src/data/letters-print.js',
-  './src/data/letters-cursive.js',
   './src/data/digits.js',
   './src/data/registry.js',
   './src/engine/drawing-engine.js',

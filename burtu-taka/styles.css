@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;700;800&family=Nunito:wght@600;700;800&family=Caveat:wght@600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;700;800&family=Nunito:wght@600;700;800&display=swap');
 
 :root{
   --sky-top:#BFE6F5;
@@ -66,28 +66,6 @@ h1{
   font-family:'Baloo 2'; font-weight:700; font-size:17px;
   box-shadow:0 4px 0 rgba(0,0,0,0.08);
 }
-
-/* -------- print/cursive toggle -------- */
-.scriptToggle{
-  display:flex; align-items:center; gap:6px;
-  background:var(--cream); border:none; border-radius:20px; padding:5px 8px;
-  box-shadow:0 4px 0 rgba(0,0,0,0.08); cursor:pointer; position:relative;
-}
-.scriptToggle-label{
-  font-weight:800; font-size:15px; width:26px; text-align:center; opacity:0.4; transition:opacity 0.2s;
-}
-.scriptToggle-label[data-script="cursive"]{ font-family:'Caveat', cursive; font-size:20px; }
-.scriptToggle-knob{
-  width:34px; height:22px; border-radius:12px; background:var(--grass);
-  position:relative; transition:background 0.2s;
-}
-.scriptToggle-knob::after{
-  content:''; position:absolute; top:2px; left:2px; width:18px; height:18px; border-radius:50%;
-  background:#fff; transition:transform 0.2s; box-shadow:0 2px 3px rgba(0,0,0,0.2);
-}
-.scriptToggle[aria-pressed="true"] .scriptToggle-knob::after{ transform:translateX(12px); }
-.scriptToggle[aria-pressed="false"] .scriptToggle-label[data-script="print"]{ opacity:1; }
-.scriptToggle[aria-pressed="true"] .scriptToggle-label[data-script="cursive"]{ opacity:1; }
 
 /* -------- set tabs (Burti / Cipari) -------- */
 .setTabs{ display:flex; gap:8px; margin-bottom:10px; }

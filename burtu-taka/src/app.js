@@ -11,7 +11,6 @@ const dom = {
   chips: document.getElementById('chips'),
   setTabs: document.getElementById('setTabs'),
   scoreVal: document.getElementById('scoreVal'),
-  scriptToggle: document.getElementById('scriptToggle'),
 };
 
 dom.scoreVal.textContent = progressStore.getScore();
@@ -34,7 +33,7 @@ function renderTabs(activeSetKey) {
     b.type = 'button';
     b.onclick = () => {
       if (set.key === controller.setKey) return;
-      controller.configure(set.key, controller.script);
+      controller.configure(set.key);
     };
     dom.setTabs.appendChild(b);
   });
@@ -61,19 +60,10 @@ function renderDots(collected, total) {
   }
 }
 
-// -------- print/cursive pārslēgs --------
-dom.scriptToggle.addEventListener('click', () => {
-  const next = controller.script === 'print' ? 'cursive' : 'print';
-  dom.scriptToggle.setAttribute('aria-pressed', String(next === 'cursive'));
-  controller.configure(controller.setKey, next);
-});
-
 // -------- init --------
 const last = progressStore.getLastContext();
-const startScript = last.script || 'print';
 const startSetKey = last.setKey && SETS[last.setKey] ? last.setKey : 'letters';
-dom.scriptToggle.setAttribute('aria-pressed', String(startScript === 'cursive'));
-controller.configure(startSetKey, startScript);
+controller.configure(startSetKey);
 
 // -------- PWA service worker --------
 if ('serviceWorker' in navigator) {

@@ -90,8 +90,8 @@ const R_STROKES = [
 ];
 const S_STROKES = [
   stroke(join(
-    arc(50,32.5,17.5, -90,-270, 20),
-    arc(50,67.5,17.5, -90,90, 20),
+    arc(50,32,18, -40,-260, 24),
+    arc(50,68,18, -80,140, 24),
   )),
 ];
 const T_STROKES = [

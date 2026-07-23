@@ -23,7 +23,7 @@ export const DIGITS = [
     stroke(line(30,15, 72,15, 12)),
   ]},
   { id: '6', label: '6', strokes: [
-    stroke(join(cubic(60,18, 28,20, 22,55, 30,68, 18), arc(48,68,19, 186,526, 28))),
+    stroke(join(cubic(60,18, 28,20, 22,55, 30,68, 18), arc(48,67,20, 190,470, 26))),
   ]},
   { id: '7', label: '7', strokes: [
     stroke(join(line(26,18, 74,18, 14), line(74,18, 38,85, 20))),

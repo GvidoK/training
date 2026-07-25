@@ -27,7 +27,7 @@ const A_STROKES = [
 ];
 const B_STROKES = [
   stroke(line(28,15, 28,85, 22)),
-  stroke(join(arc(28,32.5,17.5, -90,90, 18), arc(28,67.5,19, -90,90, 18))),
+  stroke(join(cubic(28,15, 62,15, 62,39, 28,50, 24), cubic(28,50, 67,52, 67,80, 28,85, 24))),
 ];
 const C_STROKES = [
   stroke(arc(50,50,32, -40,-300, 32)),
